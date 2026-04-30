@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'SF Pro Display', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  background-color: #f8f7f4;
+  color: #1f1f1f;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@layer components {
+  .brand-btn {
+    @apply inline-flex items-center justify-center rounded-full bg-stone-900 px-6 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:scale-[1.02] hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .brand-btn-accent {
+    @apply inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:scale-[1.02] hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
