@@ -32,9 +32,12 @@ function HomePage() {
           <p className="mt-5 max-w-xl text-sm text-stone-200 sm:text-base">
             Discover timeless silhouettes, premium textures, and elevated everyday essentials.
           </p>
-          <Link to="/shop" className="brand-btn-accent mt-9">
-            Shop Now
-          </Link>
+          <Link
+  to="/shop"
+  className="mt-9 bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg text-white transition transform hover:scale-105"
+>
+  Shop Now
+</Link>
         </div>
       </section>
 

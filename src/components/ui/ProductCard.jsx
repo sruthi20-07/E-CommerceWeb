@@ -6,7 +6,7 @@ function ProductCard({ product }) {
   const productImage = product.image || product.images?.[0]
 
   return (
-    <article className="group overflow-hidden rounded-2xl border border-stone-200/80 bg-white p-3 shadow-sm transition duration-500 hover:-translate-y-1 hover:shadow-soft">
+    <article className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 p-4">
       <div className="overflow-hidden rounded-xl">
         <img
           src={productImage}
@@ -29,7 +29,7 @@ function ProductCard({ product }) {
       <button
         type="button"
         onClick={() => addToCart(product, { quantity: 1 })}
-        className="brand-btn-accent mt-3 w-full"
+       className="mt-3 w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg transition"
       >
         Add to Cart
       </button>
